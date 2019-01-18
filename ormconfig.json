@@ -1,0 +1,28 @@
+{
+  "type": "mysql",
+  "host": "localhost",
+  "port": 3306,
+  "username": "tsuser",
+  "password": "1111",
+  "database": "ts_local",
+  "synchronize": true,
+  "logging": false,
+  "cache": {
+    "type": "redis",
+    "duration": 30000,
+    "options": {
+      "host": "localhost",
+      "port": 6379
+    }
+  },
+  "entities": [
+    "src/entity/*.ts"
+  ],
+  "migrations": [
+    "src/migration/*.ts"
+  ],
+  "cli": {
+    "entitiesDir": "src/entity",
+    "migrationsDir": "src/migration"
+  }
+}
